@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a Clone of the website [Airbnb](https://www.airbnb.com/) created with the [Next.js](https://nextjs.org/) framework. The goal was to more deeply understanding the framework, specifically in a full-stack context.
 
-## Getting Started
+### STATUS: WIP
 
-First, run the development server:
+## Vision
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Once the project is completed, a live link will appear here.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The main goals are to:
+- Created a pixel perfect UI matching Airbnb's website.
+- Implement A headless CMS so anyone can update site content with ease.
+- Retrieve backend data to populate the application.
+- Become more proficient using tailwind.css.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Plan
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+My actionable plan will be provided here soon...
 
-## Learn More
+## Action & Outcome
 
-To learn more about Next.js, take a look at the following resources:
+The hopeful outcome, to be updated...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This was a good challenge for testing my eye for copying a live site or mockup. I was able to successfully fetch content
+from the Prisma CMS, as well all of the locations as seen in the app, including, images, and text are retrieved from MongoDB.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
