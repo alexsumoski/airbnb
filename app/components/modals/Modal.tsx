@@ -12,7 +12,7 @@ interface ModalProps {
     actionLabel: string;
     disabled?: boolean;
     secondaryActionLabel?: string;
-    secondaryAction?: () => {};
+    secondaryAction?: () => void;
     onClose: () => void;
     onSubmit: () => void;
 }

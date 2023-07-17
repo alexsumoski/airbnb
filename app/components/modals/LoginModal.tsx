@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 import userLoginModal from '@/app/hooks/userLoginModel';
+import userRegisterModal from '@/app/hooks/userRegisterModel';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 import {
@@ -10,7 +11,7 @@ import {
     useForm
 } from 'react-hook-form';
 import { signIn } from 'next-auth/react';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import Modal from './Modal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
@@ -22,6 +23,7 @@ import { useRouter } from 'next/navigation';
 const LoginModal = () => {
     const router = useRouter();
     const loginModal = userLoginModal();
+    const registerModal = userRegisterModal();
     const [isLoading, setIsLoading] = useState(false);
 
     const {
@@ -58,6 +60,11 @@ const LoginModal = () => {
             }
         })
     }
+
+    const onToggle = useCallback(() => {
+        loginModal.onClose();
+        registerModal.onOpen();
+    }, [loginModal, registerModal])
 
     const bodyContent = (
         <div className='flex flex-col gap-4'>
@@ -108,14 +115,14 @@ const LoginModal = () => {
             ">
                 <div className='flex flex-row items-center justify-center gap-2'>
                     <div>
-                        Already have an account?
+                        First time using Airbnb?
                     </div>
-                    <div onClick={loginModal.onClose} className='
+                    <div onClick={onToggle} className='
                         text-neutral-800
                         cursor-pointer
                         hover:underline
                     '>
-                        Login
+                        Create an account
                     </div>
                 </div>
             </div>
@@ -133,7 +140,7 @@ const LoginModal = () => {
           body={bodyContent}
           footer={footerContent}
         />
-      );
+    );
 }
 
 export default LoginModal;
