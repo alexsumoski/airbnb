@@ -56,12 +56,10 @@ const RentModal = () => {
       const roomCount = watch('roomCount');
       const bathroomCount = watch('bathroomCount');
       const imageSrc = watch('imageSrc');
-    
       const Map = useMemo(() => dynamic(() => import('../Map'), { 
         ssr: false 
-      }), [location]);
-    
-    
+      }), [location]);    
+
       const setCustomValue = (id: string, value: any) => {
         setValue(id, value, {
           shouldDirty: true,
@@ -70,7 +68,7 @@ const RentModal = () => {
         })
     }
 
-    const onBack = () => {
+    const onBack = () => {        
         setStep((value) => value - 1);
     };
 
@@ -93,6 +91,8 @@ const RentModal = () => {
 
         return 'Back' 
     }, [step]);
+
+    let [counter, setCounter] = useState(0);
 
     let bodyContent = (
         <div className="flex flex-col gap-8">
@@ -148,6 +148,26 @@ const RentModal = () => {
               title="Share some basics about your place"
               subtitle="What amenitis do you have?"
             />
+            {/* <Counter 
+              onChange={(value) => setCustomValue('guestCount', value)}
+              value={guestCount}
+              title="Guests" 
+              subtitle="How many guests do you allow?"
+            />
+            <hr />
+            <Counter 
+              onChange={(value) => setCustomValue('roomCount', value)}
+              value={roomCount}
+              title="Rooms" 
+              subtitle="How many rooms do you have?"
+            />
+            <hr />
+            <Counter 
+              onChange={(value) => setCustomValue('bathroomCount', value)}
+              value={bathroomCount}
+              title="Bathrooms" 
+              subtitle="How many bathrooms do you have?"
+            /> */}
           </div>
         )
       }
