@@ -5,7 +5,7 @@ import Avatar from '../Avatar';
 import { useCallback, useState } from 'react';
 import MenuItem from './MenuItem';
 import userRegisterModal from '@/app/hooks/userRegisterModel';
-import userLoginModal from '@/app/hooks/userLoginModel';
+import userLoginModal from '@/app/hooks/useLoginModal';
 import userRentModal from '@/app/hooks/useRentModal';
 import { signOut } from 'next-auth/react';
 import { SafeUser } from '@/app/types';
