@@ -1,7 +1,7 @@
 'use client';
 
 import axios from 'axios';
-import userLoginModal from '@/app/hooks/userLoginModel';
+import userLoginModal from '@/app/hooks/useLoginModal';
 import userRegisterModal from '@/app/hooks/userRegisterModel';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';

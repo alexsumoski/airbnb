@@ -17,7 +17,7 @@ import Input from '../inputs/Input';
 import { toast } from 'react-hot-toast';
 import Button from '../Button';
 import { signIn } from 'next-auth/react';
-import userLoginModal from '@/app/hooks/userLoginModel';
+import userLoginModal from '@/app/hooks/useLoginModal';
 
 
 const RegisterModal = () => {
